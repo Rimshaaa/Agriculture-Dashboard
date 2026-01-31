@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agriculture Dashboard</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+  <div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar mobile-hidden" id="sidebar">
+      <div class="brand">
+        <div class="logo">Ag</div>
+        <div class="brand-text">
+          <h6>AgriPanel</h6>
+          <small>Management Dashboard</small>
+        </div>
+      </div>
+
+      <div class="profile-card" id="userProfile">
+        <img src="../assets/avatar.png" alt="User Avatar" id="userAvatar">
+        <div class="meta">
+          <h6 id="userName">Rimsha Shabbir</h6>
+          <small id="userRole">Admin</small>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a class="nav-link-item active" href="./dashboard.html">
+          <div class="nav-icon">D</div>
+          <div class="nav-text">Dashboard</div>
+        </a>
+
+        <a class="nav-link-item" href="./crops.html">
+          <div class="nav-icon">C</div>
+          <div class="nav-text">Crops</div>
+        </a>
+
+        <a class="nav-link-item" href="./farmers.html">
+          <div class="nav-icon">F</div>
+          <div class="nav-text">Farmers</div>
+        </a>
+
+        <a class="nav-link-item" href="./reports.html">
+          <div class="nav-icon">R</div>
+          <div class="nav-text">Reports</div>
+        </a>
+
+        <a class="nav-link-item" href="./settings.html">
+          <div class="nav-icon">S</div>
+          <div class="nav-text">Settings</div>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer mt-3">
+        <button class="btn btn-green w-100" id="collapseBtn">Toggle Sidebar</button>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <div class="page-title">
+          <h4>Dashboard</h4>
+          <small>Overview of your agriculture management</small>
+        </div>
+
+        <div class="topbar-actions">
+          <button class="icon-btn" id="mobileMenuBtn" title="Menu">☰</button>
+          <button class="icon-btn" id="notifyBtn" title="Notifications">🔔</button>
+          <button class="btn btn-green" id="logoutBtn">Logout</button>
+        </div>
+      </header>
+
+      <!-- STATS -->
+      <section class="grid-4" id="statsGrid">
+        <!-- Rendered by JS -->
+      </section>
+
+      <!-- CHARTS -->
+      <section class="row g-3 mt-2">
+
+        <div class="col-lg-6">
+          <div class="panel chart-box">
+            <div class="section-title">
+              <h5>Yield by Crop (Bar)</h5>
+              <span class="badge-soft">Updated</span>
+            </div>
+            <div class="bar-chart" id="barChart"></div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="panel chart-box">
+            <div class="section-title">
+              <h5>Crop Status (Pie)</h5>
+              <span class="badge-soft">Static</span>
+            </div>
+
+            <div class="pie-wrap">
+              <div class="pie"></div>
+              <div class="legend">
+                <div class="legend-item"><span class="dot"></span> Active Crops</div>
+                <div class="legend-item"><span class="dot blue"></span> Farmers</div>
+                <div class="legend-item"><span class="dot orange"></span> Farms</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="panel chart-box">
+            <div class="section-title">
+              <h5>Monthly Yield Trend (Line)</h5>
+              <span class="badge-soft">Demo</span>
+            </div>
+            <div class="line-chart">
+              <div class="line"></div>
+              <div class="line-labels">
+                <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script type="module" src="../js/app.js"></script>
+</body>
+</html>
